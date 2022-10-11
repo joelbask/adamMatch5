@@ -1,0 +1,45 @@
+bmi:
+0 - 1
+bmi = w / l
+bmi * 12.5
+
+age:
+
+1 / abs(age - 8)* 12.5 
+
+country:
+denmark 0
+sweden 8
+poland 12.5 
+italy 4
+
+date:
+picknick 3
+cinema 8
+netflix 0
+poland 12.5
+
+sport:
+friidrott 12.5
+basket 3.2
+fotboll 2.5
+fortnite 10.8
+jim 9.6
+
+
+eye:
+orange - 7.
+pink - 2
+blue - 9.3
+brown - 3
+green - 12.5
+
+hair:
+emo -16
+brunette 12.5
+blonde 8 
+ginger 2
+bald 4
+
+kebab:
+1 / kebab * 12.5

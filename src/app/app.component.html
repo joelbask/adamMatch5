@@ -1,0 +1,104 @@
+<div class="row">
+  <div class="col-12 text-center">
+    <h1>
+      Adams matchmaker 5.0
+    </h1>
+    <br>
+    <hr>
+    <h3>Simple information</h3>
+    <div class="row">
+      <div class="col-3">Full Name</div>
+      <div class="col-3">Age (years)</div>
+      <div class="col-3">Length (cm)</div>
+      <div class="col-3">Weight (kg)</div>
+    </div>
+    <div class="row">
+      <div class="col-3"><input type="text" [(ngModel)]="answer.name"></div>
+      <div class="col-3"><input type="number" min="1" max="85" [(ngModel)]="answer.age"></div>
+      <div class="col-3"><input type="number" min="140" max="200" [(ngModel)]="answer.length"></div>
+      <div class="col-3"><input type="number" min="25" max="250" [(ngModel)]="answer.weight"></div>
+    </div>
+    <br>
+    <hr>
+    <br>
+    <h3>Matchmaking questions</h3>
+    <br>
+    <div class="row">
+      <div class="col-4">your favorite country</div>
+      <div class="col-4">your optimal date</div>
+      <div class="col-4">your favorite sport</div>
+    </div>
+    <div class="row">
+      <div class="col-4">
+        <select name="country" id="country" [(ngModel)]="answer.country">
+          <option value="" selected disabled hidden>Choose here</option>
+          <option value="denmark">Denmark</option>
+          <option value="sweden">Sweden</option>
+          <option value="poland">Poland</option>
+          <option value="italy">Italy</option>
+        </select>
+      </div>
+      <div class="col-4">
+        <select name="date" id="date" [(ngModel)]="answer.date">
+          <option value="" selected disabled hidden>Choose here</option>
+          <option value="picknick">Picknick</option>
+          <option value="cinema">Cinema</option>
+          <option value="netflixAndChill">Netflix & grill</option>
+          <option value="sightseeingInPoland">Sightseeing in Poland</option>
+        </select>
+      </div>
+      <div class="col-4">
+        <select name="sport" id="sport" [(ngModel)]="answer.sport">
+          <option value="" selected disabled hidden>Choose here</option>
+          <option value="friidrott">Friidrott</option>
+          <option value="basketball">Basketball</option>
+          <option value="football">Football</option>
+          <option value="fortnite">Fortnite (it is real sport)</option>
+          <option value="jim">jim</option>
+        </select>
+      </div>
+    </div>
+    <br>
+    <div class="row">
+      <div class="col-4">your eye color</div>
+      <div class="col-4">your hair color</div>
+      <div class="col-4">the perfect Kebab size (cm)</div>
+    </div>
+    <div class="row">
+      <div class="col-4">
+        <select name="eyeColor" id="eyeColor" [(ngModel)]="answer.eyeColor">
+          <option value="" selected disabled hidden>Choose here</option>
+          <option value="orange">orange</option>
+          <option value="pink">pink</option>
+          <option value="green">green</option>
+          <option value="brown">brown</option>
+          <option value="blue">blue</option>
+        </select>
+      </div>
+      <div class="col-4">
+        <select name="hair" id="hair" [(ngModel)]="answer.hairColor">
+          <option value="" selected disabled hidden>Choose here</option>
+          <option value="emo">emo color ( green, red, blue )</option>
+          <option value="brunette">brunette</option>
+          <option value="blonde">blonde</option>
+          <option value="bald">bald</option>
+          <option value="ginger">ginger</option>
+        </select>
+      </div>
+      <div class="col-4">
+        <input type="number" [(ngModel)]="answer.kebabSize" min="1" max="10">
+      </div>
+    </div>
+    <br>
+    <br>
+    <div class="row">
+      <div>
+        <button type="button" class="btn btn-primary btn-lg" (click)="calculate()">Calculate</button>
+      </div>
+    </div>
+    <br>
+    <div class="text-center" *ngIf="percentage > -1">
+      Your Percentage: {{percentage | number: '1.0-2'}}%
+    </div>
+  </div>
+</div>
